@@ -1,0 +1,37 @@
+.map-info
+  position: relative
+
+  .inner:last-child
+    padding-bottom: 0
+
+#map
+  width: 100%
+  height: 100%
+  position: absolute
+  left: 0
+  top: 0
+
+
+.left-map-info
+  width: 50%
+  background: $white
+  position: relative
+  z-index: 2
+  box-shadow: 0px 2px 2px 0 transparentize($black,0.9)
+  margin: 20px 0px
+  padding: 20px 40px
+
+  p
+    font-size: rem-calc(12.5px)
+    line-height: rem-calc(14px)
+    font-weight: 600
+    margin-top: 15px
+
+    &:first-child
+      margin-top: 0
+
+  span
+    font-size: rem-calc(14.5px)
+    line-height: rem-calc(16px)
+    display: block
+    margin-top: 5px

@@ -1,0 +1,122 @@
+header
+  background: $light-white
+  border-bottom: 1px solid $more-light-white
+  color: $black
+  height: 59px
+  width: 100%
+
+  .inner
+    height: 100%
+    margin: 0 auto
+    max-width: $container-width
+    padding: 0 20px
+    position: relative
+
+  .search
+    bottom: 15px
+    position: absolute
+    right: 20px
+
+    input
+      margin-bottom: 0
+      box-shadow: none
+
+  .logo
+    left: 20px
+    position: absolute
+    top: 13px
+
+  .btn-search
+    background: inline-image('search.svg') no-repeat
+    cursor: pointer
+    height: 18px
+    margin-top: -10px
+    position: absolute
+    right: 8px
+    top: 50%
+    width: 18px
+
+
+.menu
+  left: 260px
+  position: absolute
+  top: 0
+
+  ul
+    font-size: 0
+
+    &>*
+      line-height: 55px
+      vertical-align: middle
+
+    ul
+      background: $faintly-orange
+      display: none
+      left: 0
+      padding: 10px 0
+      position: absolute
+      top: 59px
+
+
+  li
+    border-bottom: 3px solid transparent
+    display: inline-block
+    font-size: 15px
+    position: relative
+
+    li
+      border: 0
+      display: block
+      line-height: 40px
+      width: 100%
+
+      a
+        padding: 0 25px
+
+      &:hover
+        background: transparentize($white, .5)
+        border: 0
+
+    &:hover
+      border-bottom: 3px solid transparentize($orange, .5)
+
+      ul
+        display: block
+
+    &.active
+      border-bottom: 3px solid $orange
+      font-weight: 500
+
+    &.multi
+      &:hover
+        background: $faintly-orange
+        border-color: transparent
+
+        &::after
+          background: $orange
+          content: ''
+          display: block
+          height: 1px
+          left: 0
+          position: absolute
+          top: 58px
+          width: 100%
+
+  a
+    display: block
+    height: 100%
+    margin-bottom: -2px
+    margin-top: 2px
+    padding: 0 20px
+    text-decoration: none
+    width: 100%
+    color: $mono-dark
+
+  .delimiter
+    background: $more-light-white
+    display: inline-block
+    font-size: 18px
+    height: 40px
+    margin: 0 40px
+    width: 1px
+

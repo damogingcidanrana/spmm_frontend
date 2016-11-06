@@ -1,0 +1,43 @@
+.pagination
+  display: inline-block
+
+  a
+    text-decoration: none
+
+  a.arrow-left,
+  a.arrow-right
+    display: inline-block
+    vertical-align: middle
+    opacity: .5
+    width: 36px
+    height: 36px
+    background: inline-image('arrow-news.svg') no-repeat center center
+
+    &[href]
+      opacity: 1
+
+  a.arrow-left
+    transform: scaleX(-1)
+
+  a.page-href
+    display: inline-block
+    vertical-align: middle
+    font-weight: 500
+    font-size: rem-calc(15px)
+    width: 36px
+    height: 36px
+    border-radius: 50%
+    line-height: rem-calc(36px)
+    background: $more-light-white
+    text-align: center
+    margin: 0 1.5px
+
+    &[href]
+      background: transparent
+      font-weight: 400
+
+      &:hover
+        background: $more-light-white
+
+  .dotted
+    padding: 0 5px

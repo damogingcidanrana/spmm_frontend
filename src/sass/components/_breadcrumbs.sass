@@ -1,0 +1,35 @@
+.breadcrumbs
+  font-size: rem-calc(13px)
+  line-height: rem-calc(20px)
+  padding-right: 190px
+  margin: 12px 0 42px
+  margin-left: 100px
+
+  a
+    display: inline-block
+    line-height: rem-calc(20px)
+    font-size: rem-calc(13px)
+    text-decoration: underline
+
+    &::before
+      content: ''
+      display: inline-block
+      vertical-align: middle
+      width: 12px
+      height: 9px
+      margin: 0 9px
+      background: inline-image('arrow-news.svg') no-repeat
+
+  span
+    &::before
+      content: ''
+      display: inline-block
+      vertical-align: middle
+      width: 12px
+      height: 9px
+      margin: 0 9px
+      background: inline-image('arrow-news.svg') no-repeat
+
+
+    &:hover
+      text-decoration: none

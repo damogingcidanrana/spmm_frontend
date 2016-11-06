@@ -1,0 +1,94 @@
+=font-family($font)
+  font-family: $font, sans-serif
+
+=inline-block-middle
+
+  &::after
+    display: inline-block
+    content: ''
+    height: 100%
+    width: 1px
+    vertical-align: middle
+
+=inline-block-center
+  text-align: center
+
+  &>*
+    text-align: left
+
+
+=letter-gradient($color1, $color2)
+  color: $color2
+  -webkit-text-fill-color: transparent
+  @include filter-gradient($color1, $color2, horizontal)
+  background: -webkit-linear-gradient(left top,  $color1 0%,$color2 100%),linear-gradient(transparent, transparent)
+  -webkit-background-clip: text
+
+=flex-fix
+  &>*
+    flex: 0 0 auto
+    -webkit-box-flex-grow: 0
+    -moz-box-flex-grow: 0
+    -webkit-flex-grow: 0
+    -ms-flex-grow: 0
+    flex-grow: 0
+
+=container
+  box-sizing: border-box
+  margin: 0 auto
+  width: $container-width
+
+=ico-block
+  content: ''
+  display: block
+  position: absolute
+
+
+=clearfix
+  &::after
+    clear: both
+    content: ''
+    display: block
+
+=clearfixbefore
+  &::before
+    clear: both
+    content: ''
+    display: block
+
+=addico($name, $x: 0, $y: 0)
+  &
+    position: relative
+
+  &::after
+    +sprite-dimensions($icons, $name)
+    background: sprite($icons, $name)
+    content: ''
+    display: block
+    position: absolute
+
+    @if $x == 'center'
+      left: 50%
+      margin-left: -(sprite-width($icons, $name)) / 2
+    @else
+      left: $x
+
+    @if $y == 'center'
+      margin-top: -(sprite-height($icons, $name)) / 2
+      top: 50%
+    @else
+      top: $y
+
+=justify-block
+  &::after
+    content: ''
+    display: inline-block
+    width: 100%
+
+=last-margin0
+  &:last-child
+    margin: 0
+
+@function em($target, $context: 16)
+  @return ($target / $context) * 1em
+
